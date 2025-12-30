@@ -1,4 +1,4 @@
-# CRUD REST API with Rust 🦀and MySQL using Axum & SQLx
+# sample CRUD REST API with Rust and MySQL using Axum & SQLx
 
 
 ## Current Stack Version
@@ -9,7 +9,7 @@
 
 ```sh
 # Init Project
-cargo init raditzlawliet_rust-note-rest
+cargo init test_rust
 
 # Depedency
 cargo add axum
