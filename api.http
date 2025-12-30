@@ -1,0 +1,33 @@
+### Health Check
+GET http://localhost:8080/api/v1/healthcheck
+
+### List
+# @name list_note
+GET http://localhost:8080/api/v1/notes
+
+@latest_note_id = {{list_note.response.body.$.notes[0].id}}
+
+### Create
+POST http://localhost:8080/api/v1/notes
+content-type: application/json
+
+{
+    "title": "a note",
+    "content": "here some reminder, mention @raditzlawliet",
+    "is_published": true
+}
+
+### Read
+GET http://localhost:8080/api/v1/notes/{{latest_note_id}}
+
+### Update
+PATCH http://localhost:8080/api/v1/notes/{{latest_note_id}}
+content-type: application/json
+
+{
+    "content": "here some reminder, mention @raditzlawliet share and like"
+}
+
+### Delete
+DELETE http://localhost:8080/api/v1/notes/{{latest_note_id}}
+
